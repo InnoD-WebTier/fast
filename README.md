@@ -1,10 +1,6 @@
-# gatsby-starter-default
-The default Gatsby starter
+# FAST
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
-## Deploy
+By [Innovative Design](http://innovativedesign.club)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+### Overview
+This is the website for FAST at Berkeley. This is a guide to managing the website. We use the static site generator [Gatsby.js](https://github.com/gatsbyjs/gatsby). If you're curious about what a static site generator is, you can read more [here](https://davidwalsh.name/introduction-static-site-generators). You should be familiar with Git, Github, and the basics of HTML, CSS, and Javascript in order to maintain this website.
