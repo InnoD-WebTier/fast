@@ -1,0 +1,13 @@
+@import "./vendors/normalize";
+@import "variables";
+@import "navbar";
+@import "landing";
+
+/* Adjustments to tag defaults */
+::selection {
+  background-color: $yellow;
+}
+
+.content {
+	padding-top: 2.5rem;
+}

@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic);
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT);
+
+$font-body: 'Old Standard TT', sans-serif;
+$font-accent: 'Libre Baskerville', sans-serif;
+$font-heading: 'Montserrat', sans-serif;
+
+$off-white: #FAFAFA;
+$off-black: #212121;
+$grey: #BDBDBD;
+$light-grey: #E0E0E0;
+$yellow: #FFDE00;
+
+$default-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+$nav-height: 40px;
+$width-increments: 300px;
+
+@mixin transition($props) {
+   transition: $props;
+  -ms-transition: $props;
+  -moz-transition: $props;
+  -webkit-transition: $props;
+}

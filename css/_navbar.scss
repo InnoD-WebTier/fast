@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+$font-nav: 'Raleway', sans-serif;
+
+.navbar {
+  height: $nav-height;
+  background-color: $off-black;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 10 !important;
+}
+
+.nav-content {
+  height: 100%;
+
+  margin: 0rem auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// .logo {
+//   width: 60px;
+//   height: 60px;
+//   margin-right: 0.75rem;
+// }
+
+.menu-button {
+  width: auto;
+  height: 16px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+$menu-item-height: 40px;
+.nav-links {
+  top: $nav-height;
+  position: absolute;
+
+  width: 100%;
+
+  max-height: 0px;
+  overflow: hidden;
+
+  @include transition(all 0.2s ease-in-out);
+}
+
+.nav-links.show {
+  max-height: 5 * $menu-item-height;
+}
+
+.nav-link {
+  display: block;
+  padding: 0rem 1rem;
+  text-transform: uppercase;
+
+  font-size: 0.75rem;
+  letter-spacing: 0.25rem;
+
+  height: $menu-item-height;
+  line-height: $menu-item-height;
+
+  font-family: $font-nav;
+  color: white;
+  text-decoration: none;
+  background-color: $off-black;
+}
+
+@media screen and (min-width: 3 * $width-increments) {
+  // 900px: show full links
+  .menu-button { display: none; }
+  .nav-content {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-links {
+    padding: 7rem 0rem;
+    width: 700px;
+    height: 100%;
+    max-height: 100%;
+    position: static;
+
+    height: $menu-item-height;
+    line-height: $menu-item-height;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-link {
+    font-size: 1,2rem;
+
+    height: auto;
+    line-height: normal;
+    display: inline-block;
+
+    display: inline-flex;
+    align-items: flex-end;
+  }
+  .nav-link.active, .nav-link:hover {
+    border-left: none; // cancel out mobile indicator
+    color: $light-grey;
+  }
+}
