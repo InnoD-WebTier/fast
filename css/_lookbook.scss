@@ -1,0 +1,82 @@
+body, html {
+	background-color: $off-white;
+	color: $off-black;
+}
+
+.lookbook {
+  background: $off-white;
+  color: $off-black;
+  border: 0;
+  margin: auto;
+  width: 80vw;
+  padding: 5vh 5vw;
+  .date {
+  	font-family: 'Libre Baskerville', serif;
+  	font-size: 13px;
+  	font-style: italic;
+  }
+  .words {
+  	text-transform: uppercase;
+  	font-family: 'Montserrat', sans-serif;
+  	font-size: 14px;
+  	letter-spacing: 1px;
+  }
+  h1 {
+  	color: #BFBFBF;
+  	font-family: 'Montserrat', sans-serif;
+  }
+
+  .photoblock {
+  	display: flex;
+  	flex-wrap: wrap;
+  	align-content: stretch;
+  	width: auto;
+  	margin: 3vh 0;
+  	height: auto;
+  }
+
+  .block {
+  	flex: 1;
+  	height: 30vh;
+  	padding: 0;
+  	background: $off-white;
+  	margin-right: 10px;
+  	margin-bottom: 10px;
+  	min-width: 20vw;
+  }
+  .cover {
+  	object-fit: cover;
+  }
+
+  .nametag {
+  	min-width: 0;
+  	color: $off-white;
+  	background-color: $off-black;
+  	font-family: $font-heading;
+  	padding: 1em;
+  	box-sizing: border-box;
+  }
+
+  .namee {
+  	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	text-align: center;
+  }
+
+  .woo{
+  	font-size: 16px;
+  	text-transform: uppercase;
+  	font-family: $font-heading;
+  	letter-spacing: .25em;
+  }
+  .wot{
+  	position: relative;
+  	top: -1em;
+  	margin-bottom: 10px;
+  	font-size: 10px;
+  	font-family: $font-accent;
+  	font-weight: lighter;
+  	letter-spacing: .1em;
+  }
+}
