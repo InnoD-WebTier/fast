@@ -4,8 +4,66 @@ import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 import { config } from 'config'
 
+class LookbookItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render () {
+    const images = this.props.images;
+    const author = this.props.author;
+    const authorIndex = this.props.authorIndex;
+
+    const lookbook = [];
+    for (let i=0; i < images.length; i++) {
+      if (i === authorIndex) {
+        lookbook.push(
+          <div key={"author " + i.toString()} className="block nametag">
+            <div className="name">
+              <span className="author-prefix">designed by<br /></span>
+              <span className="author">{author}</span>
+            </div>
+          </div>
+        )
+      }
+      lookbook.push(
+        <img key={i} src={prefixLink(images[i])} className="cover block" />
+      )
+    }
+
+
+    return (
+      <div className="photoblock">
+        {lookbook}
+      </div>
+    );
+  }
+}
+
 export default class Lookbook extends React.Component {
   render () {
+
+    const lookbooks = []
+    for (let i=0; i < 9; i+=3) {
+      const authorIndex = i % 4;
+      lookbooks.push(
+        <LookbookItem
+          key={i}
+          author="Tina Xu"
+          images={
+            [
+              "/assets/1.jpg",
+              "/assets/2.jpg",
+              "/assets/3.jpg",
+              "/assets/4.jpg",
+              "/assets/5.jpg",
+            ]
+          }
+          authorIndex={authorIndex}
+        />
+      )
+    }
+
     return (
       <div className="lookbook">
         <Helmet
@@ -14,43 +72,8 @@ export default class Lookbook extends React.Component {
         <div className="desc">
   				<span className="date">March 2016</span><span className="words"> / InnoDxRetreat</span>
   			</div>
-  			<div className="photoblock">
-  				<img src={prefixLink("/assets/1.jpg")} className="cover block" />
-  				<div className="block nametag">
-  					<div className="namee">
-  						<span className="wot">designed by<br /></span>
-  						<span className="woo">somebody&#39;s name</span>
-  					</div>
-  				</div>
-  				<img src={prefixLink("/assets/2.jpg")} className="cover block" />
-  				<img src={prefixLink("/assets/3.jpg")} className="cover block" />
-  				<img src={prefixLink("/assets/4.jpg")} className="cover block" />
-  				<img src={prefixLink("/assets/3.jpg")} className="cover block" />
-  			</div>
 
-  			<div className="photoblock">
-  				<img src={prefixLink("/assets/4.jpg")} className="cover block" />
-  				<img src={prefixLink("/assets/1.jpg")} className="cover block" />
-  				<img src={prefixLink("/assets/5.jpg")} className="cover block" />
-  				<div className="block nametag">
-  					<div className="namee">
-  						<span className="wot">from<br /></span>
-  						<span className="woo">somebody&#39;s name</span>
-  					</div>
-  				</div>
-  			</div>
-
-  			<div className="photoblock">
-  				<div className="block nametag">
-  					<div className="namee">
-  						<span className="wot">by<br /></span>
-  						<span className="woo">somebody&#39;s name</span>
-  					</div>
-  				</div>
-  				<img src={prefixLink("/assets/4.jpg")} className="cover block" />
-  				<img src={prefixLink("/assets/1.jpg")} className="cover block" />
-  				<img src={prefixLink("/assets/5.jpg")} className="cover block" />
-  			</div>
+        {lookbooks}
 
       </div>
     )

@@ -3,12 +3,23 @@
 @import "navbar";
 @import "landing";
 @import "lookbook";
+@import "blog";
+@import "about";
 
 /* Adjustments to tag defaults */
 ::selection {
   background-color: $yellow;
 }
 
-.content {
-	padding-top: 2.5rem;
+html {
+  background-color: $off-white;
+  font-family: $font-body;
+}
+
+.lookbook, .blog, .about {
+  margin: auto;
+  padding: 10vh 15vw;
+  border: 0;
+  background: $off-white;
+  color: $off-black;
 }

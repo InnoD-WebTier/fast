@@ -1,0 +1,32 @@
+.blog-entry {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: $default-shadow;
+  width: 66%;
+  .blog-photo {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.blog-preview {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .date {
+    color: $light-grey;
+    margin-bottom: 1rem;
+  }
+  .preview-text {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .read-more {
+    color: $link-color;
+    margin-bottom: 1rem;
+    &:hover {
+      color: $link-hover;
+    }
+  }
+}

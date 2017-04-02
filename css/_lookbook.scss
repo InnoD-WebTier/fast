@@ -1,82 +1,78 @@
-body, html {
-	background-color: $off-white;
-	color: $off-black;
-}
-
 .lookbook {
+  margin: auto;
+  padding: 5vh 5vw;
+  border: 0;
   background: $off-white;
   color: $off-black;
-  border: 0;
-  margin: auto;
-  width: 80vw;
-  padding: 5vh 5vw;
   .date {
-  	font-family: 'Libre Baskerville', serif;
-  	font-size: 13px;
   	font-style: italic;
+  	font-size: 13px;
+  	font-family: $font-body;
   }
   .words {
   	text-transform: uppercase;
-  	font-family: 'Montserrat', sans-serif;
-  	font-size: 14px;
   	letter-spacing: 1px;
+  	font-size: 14px;
+  	font-family: $font-heading;
   }
   h1 {
   	color: #BFBFBF;
-  	font-family: 'Montserrat', sans-serif;
+  	font-family: $font-body;
   }
 
   .photoblock {
   	display: flex;
+  	margin: 3vh 0;
+  	width: auto;
+  	height: auto;
+
   	flex-wrap: wrap;
   	align-content: stretch;
-  	width: auto;
-  	margin: 3vh 0;
-  	height: auto;
   }
 
   .block {
-  	flex: 1;
-  	height: 30vh;
-  	padding: 0;
-  	background: $off-white;
   	margin-right: 10px;
   	margin-bottom: 10px;
-  	min-width: 20vw;
+  	padding: 0;
+  	min-width: 15vw;
+  	height: 30vh;
+  	background: $off-white;
+
+  	flex: 1;
   }
   .cover {
   	object-fit: cover;
   }
 
   .nametag {
-  	min-width: 0;
-  	color: $off-white;
-  	background-color: $off-black;
-  	font-family: $font-heading;
-  	padding: 1em;
   	box-sizing: border-box;
+  	padding: 1rem;
+  	min-width: 10vw;
+  	background-color: $off-black;
+  	color: $off-white;
+  	font-family: $font-heading;
   }
 
-  .namee {
+  .name {
   	position: relative;
   	top: 50%;
-  	transform: translateY(-50%);
   	text-align: center;
+  	transform: translateY(-50%);
   }
 
-  .woo{
-  	font-size: 16px;
+  .author {
   	text-transform: uppercase;
+  	letter-spacing: .25rem;
+  	font-size: 16px;
   	font-family: $font-heading;
-  	letter-spacing: .25em;
   }
-  .wot{
+  .author-prefix {
   	position: relative;
-  	top: -1em;
+  	top: -1rem;
   	margin-bottom: 10px;
+  	letter-spacing: .1rem;
+  	font-weight: lighter;
   	font-size: 10px;
   	font-family: $font-accent;
-  	font-weight: lighter;
-  	letter-spacing: .1em;
   }
 }
