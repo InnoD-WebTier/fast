@@ -4,6 +4,7 @@
 @import "landing";
 @import "lookbook";
 @import "blog";
+@import "blogpost";
 @import "about";
 
 /* Adjustments to tag defaults */
@@ -16,10 +17,18 @@ html {
   font-family: $font-body;
 }
 
-.lookbook, .blog, .about {
+.lookbook, .blog, .about, .blog-post {
   margin: auto;
   padding: 10vh 15vw;
   border: 0;
   background: $off-white;
   color: $off-black;
+}
+
+.no-page {
+  font-family: $font-body;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - #{$nav-height});
 }

@@ -10,14 +10,24 @@ module.exports = React.createClass({
     }
   },
   render () {
-    const post = this.props.route.page.data
+    const post = this.props.route.page.data;
+    if (post.body.includes('Sorry, this page does not exist.')) {
+      return (
+        <div className="no-page">
+          <div dangerouslySetInnerHTML={{ __html: post.body }} />
+        </div>
+      );
+    }
     return (
       <div className="markdown">
         <Helmet
           title={`${config.siteTitle} | ${post.title}`}
         />
-        <h1>{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.body }} />
+        <div className="blog-post">
+          <div className="title">Crash and Burn</div>
+          <div className="date">March 2, 2015</div>
+          <div className="post" dangerouslySetInnerHTML={{ __html: post.body }} />
+        </div>
       </div>
     )
   },

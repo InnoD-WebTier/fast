@@ -1,0 +1,28 @@
+.blog-post {
+  .title {
+    font-family: $font-heading;
+    font-size: 3rem;
+    font-weight: 800;
+    color: $off-black;
+  }
+  .subtitle {
+    font-family: $font-heading;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $off-black;
+  }
+  .date {
+    color: $grey;
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+    font-style: italic;
+    font-family: $font-body;
+  }
+  .post {
+    margin-top: 3rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    font-family: $font-body;
+  }
+}
