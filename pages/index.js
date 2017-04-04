@@ -12,8 +12,8 @@ export default class Index extends React.Component {
           title={config.siteTitle}
         />
         <video autoPlay loop poster={prefixLink("/assets/lucy-3-1024x683.jpg")} id="bg-vid">
-          <source src={prefixLink("/landingvideo.mp4")} type="video/mp4" />
-          <source src={prefixLink("/landingvideo.webm")} type="video/webm" />
+          <source src={prefixLink("assets/landingvideo.jpg")} type="video/mp4" />
+          <source src={prefixLink("assets/landingvideo.webm")} type="video/webm" />
         </video>
 
         <div className="vid-overlay"></div>
