@@ -15,39 +15,21 @@ class LookbookItem extends React.Component {
     const author = this.props.author;
     const authorIndex = this.props.authorIndex;
 
-    const width = document.width;
-
     const lookbook = [];
     for (let i=0; i < images.length; i++) {
-      if (width < 900) {
-        if (i === 0) {
-          lookbook.push(
-            <div key={"author " + i.toString()} className="block nametag">
-              <div className="name">
-                <span className="author-prefix">designed by<br /></span>
-                <span className="author">{author}</span>
-              </div>
-            </div>
-          )
-        }
+      if (i === authorIndex) {
         lookbook.push(
-          <img key={i} src={prefixLink(images[i])} className="cover block" />
-        )
-      } else {
-        if (i === authorIndex) {
-          lookbook.push(
-            <div key={"author " + i.toString()} className="block nametag">
-              <div className="name">
-                <span className="author-prefix">designed by<br /></span>
-                <span className="author">{author}</span>
-              </div>
+          <div key={"author " + i.toString()} className="block nametag">
+            <div className="name">
+              <span className="author-prefix">designed by<br /></span>
+              <span className="author">{author}</span>
             </div>
-          )
-        }
-        lookbook.push(
-          <img key={i} src={prefixLink(images[i])} className="cover block" />
-        )
+          </div>
+        );
       }
+      lookbook.push(
+        <img key={i} src={prefixLink(images[i])} className="cover block" />
+      );
     }
 
 
