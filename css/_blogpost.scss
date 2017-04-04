@@ -1,4 +1,13 @@
 .blog-post {
+  .back {
+    color: $grey;
+    display: inline-block;
+    padding-bottom: 3rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    font-family: $font-heading;
+    text-decoration: none;
+  }
   .title {
     font-family: $font-heading;
     font-size: 3rem;

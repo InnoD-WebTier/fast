@@ -1,6 +1,8 @@
 import React from 'react'
 import 'css/markdown-styles.css'
 import Helmet from 'react-helmet'
+import { Link } from 'react-router'
+import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 
 module.exports = React.createClass({
@@ -24,6 +26,7 @@ module.exports = React.createClass({
           title={`${config.siteTitle} | ${post.title}`}
         />
         <div className="blog-post">
+          <Link className="back" to={prefixLink('/blog/')}>back</Link>
           <div className="title">Crash and Burn</div>
           <div className="date">March 2, 2015</div>
           <div className="post" dangerouslySetInnerHTML={{ __html: post.body }} />

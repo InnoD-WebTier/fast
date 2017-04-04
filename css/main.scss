@@ -25,6 +25,18 @@ html {
   color: $off-black;
 }
 
+@media screen and (max-width: 3 * $width-increments) {
+  .lookbook, .blog, .about, .blog-post {
+    padding: 10vh 10vw;
+  }
+}
+
+@media screen and (max-width: 2 * $width-increments) {
+  .lookbook, .blog, .about, .blog-post {
+    padding: 5vh 5vw;
+  }
+}
+
 .no-page {
   font-family: $font-body;
   display: flex;
