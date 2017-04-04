@@ -15,7 +15,7 @@ class LookbookItem extends React.Component {
     const author = this.props.author;
     const authorIndex = this.props.authorIndex;
 
-    const width = $(window).width();
+    const width = document.width;
 
     const lookbook = [];
     for (let i=0; i < images.length; i++) {
@@ -89,7 +89,7 @@ export default class Lookbook extends React.Component {
           title={config.siteTitle}
         />
         <div className="desc">
-  				<span className="date">Spring 2016</span><span className="words"> / Suprasensory</span> (pdf)
+  				<span className="date">Spring 2016</span><span className="words"> / Suprasensory</span><a className="pdf" target="_blank" href="https://www.ocf.berkeley.edu/~fast/wp-content/uploads/2016/10/FFP.pdf">  (pdf)</a>
   			</div>
 
         {lookbooks}
