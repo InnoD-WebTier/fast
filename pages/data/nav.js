@@ -5,6 +5,6 @@ export default
 		"blog",
 		"lookbook",
 		"events",
-    "sponsors",
+    "people",
   ]
 }

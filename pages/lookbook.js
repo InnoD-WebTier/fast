@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 import { config } from 'config'
+import $ from 'jquery';
 
 class LookbookItem extends React.Component {
   constructor(props) {
@@ -14,21 +15,39 @@ class LookbookItem extends React.Component {
     const author = this.props.author;
     const authorIndex = this.props.authorIndex;
 
+    const width = $(window).width();
+
     const lookbook = [];
     for (let i=0; i < images.length; i++) {
-      if (i === authorIndex) {
-        lookbook.push(
-          <div key={"author " + i.toString()} className="block nametag">
-            <div className="name">
-              <span className="author-prefix">designed by<br /></span>
-              <span className="author">{author}</span>
+      if (width < 900) {
+        if (i === 0) {
+          lookbook.push(
+            <div key={"author " + i.toString()} className="block nametag">
+              <div className="name">
+                <span className="author-prefix">designed by<br /></span>
+                <span className="author">{author}</span>
+              </div>
             </div>
-          </div>
+          )
+        }
+        lookbook.push(
+          <img key={i} src={prefixLink(images[i])} className="cover block" />
+        )
+      } else {
+        if (i === authorIndex) {
+          lookbook.push(
+            <div key={"author " + i.toString()} className="block nametag">
+              <div className="name">
+                <span className="author-prefix">designed by<br /></span>
+                <span className="author">{author}</span>
+              </div>
+            </div>
+          )
+        }
+        lookbook.push(
+          <img key={i} src={prefixLink(images[i])} className="cover block" />
         )
       }
-      lookbook.push(
-        <img key={i} src={prefixLink(images[i])} className="cover block" />
-      )
     }
 
 
@@ -70,7 +89,7 @@ export default class Lookbook extends React.Component {
           title={config.siteTitle}
         />
         <div className="desc">
-  				<span className="date">March 2016</span><span className="words"> / InnoDxRetreat</span>
+  				<span className="date">Spring 2016</span><span className="words"> / Suprasensory</span> (pdf)
   			</div>
 
         {lookbooks}

@@ -6,6 +6,7 @@
 @import "blog";
 @import "blogpost";
 @import "about";
+@import "people";
 
 /* Adjustments to tag defaults */
 ::selection {
@@ -17,7 +18,7 @@ html {
   font-family: $font-body;
 }
 
-.lookbook, .blog, .about, .blog-post {
+.lookbook, .blog, .about, .blog-post, .people {
   margin: auto;
   padding: 10vh 15vw;
   border: 0;
@@ -26,13 +27,13 @@ html {
 }
 
 @media screen and (max-width: 3 * $width-increments) {
-  .lookbook, .blog, .about, .blog-post {
+  .lookbook, .blog, .about, .blog-post, .people {
     padding: 10vh 10vw;
   }
 }
 
 @media screen and (max-width: 2 * $width-increments) {
-  .lookbook, .blog, .about, .blog-post {
+  .lookbook, .blog, .about, .blog-post, .people {
     padding: 5vh 5vw;
   }
 }
