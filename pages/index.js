@@ -11,13 +11,10 @@ export default class Index extends React.Component {
         <Helmet
           title={config.siteTitle}
         />
-        <video autoPlay loop poster={prefixLink("/assets/lucy-3-1024x683.jpg")} id="bg-vid">
+        <video autoPlay loop id="bg-vid">
           <source src={prefixLink("assets/landingvideo.jpg")} type="video/mp4" />
-          <source src={prefixLink("assets/landingvideo.webm")} type="video/webm" />
         </video>
-
         <div className="vid-overlay"></div>
-
         <div className="pure-g">
           <div className="pure-u-1">
             <img className="top-img" src={prefixLink("/assets/fastlogo.png") }/>

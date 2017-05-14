@@ -1,0 +1,34 @@
+.issue {
+  .photos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .img-container {
+    width: 23%;
+    margin: 0rem 1%;
+    margin-bottom: 2rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .back-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    margin-left: 1%;
+    img {
+      height: 0.75rem;
+      width: auto;
+      margin-right: 1rem;
+    }
+    .button {
+      color: $off-black;
+      font-family: $font-heading;
+      text-decoration: none;
+    }
+  }
+}

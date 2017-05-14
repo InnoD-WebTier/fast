@@ -1,21 +1,35 @@
 .lookbook {
-  .date {
-  	font-style: italic;
-  	font-size: 13px;
-  	font-family: $font-body;
+  .header {
+    margin-bottom: 0.5rem;
+    .semester {
+    	font-style: italic;
+    	font-size: 13px;
+    	font-family: $font-body;
+      margin-bottom: 0.5rem;
+    }
+    .title {
+    	text-transform: uppercase;
+    	letter-spacing: 1px;
+    	font-size: 14px;
+    	font-family: $font-heading;
+    }
   }
-  .words {
-  	text-transform: uppercase;
-  	letter-spacing: 1px;
-  	font-size: 14px;
-  	font-family: $font-heading;
-  }
-  .pdf {
-    font-family: $font-body;
-    font-size: 14px;
-    padding-left: 14px;
-    text-decoration: none;
-    color: $off-black;
+  .links {
+    .pdf {
+      font-family: $font-body;
+      font-size: 13px;
+      padding-right: 28px;
+      text-decoration: none;
+      color: $off-black;
+    }
+    .view-carousel {
+      font-family: $font-body;
+      font-size: 13px;
+      padding-right: 14px;
+      text-decoration: none;
+      color: $off-black;
+      text-decoration: none;
+    }
   }
   h1 {
   	color: #BFBFBF;
@@ -27,7 +41,6 @@
   	margin: 3vh 0;
   	width: auto;
   	height: auto;
-
   	flex-wrap: wrap;
   	align-content: stretch;
   }
@@ -37,13 +50,14 @@
   	margin-bottom: 10px;
   	padding: 0;
   	min-width: 15vw;
-  	height: 30vh;
+  	height: 40vh;
   	background: $off-white;
 
   	flex: 1;
   }
   .cover {
   	object-fit: cover;
+    object-position: top;
   }
 
   .nametag {

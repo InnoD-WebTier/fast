@@ -4,7 +4,6 @@ export default
 		"about",
 		"blog",
 		"lookbook",
-		"events",
     "people",
   ]
 }

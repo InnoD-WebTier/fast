@@ -5,77 +5,70 @@ import Helmet from 'react-helmet'
 import { config } from 'config'
 import $ from 'jquery';
 
-class LookbookItem extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render () {
-    const images = this.props.images;
-    const author = this.props.author;
-    const authorIndex = this.props.authorIndex;
-
-    const lookbook = [];
-    for (let i=0; i < images.length; i++) {
-      if (i === authorIndex) {
-        lookbook.push(
-          <div key={"author " + i.toString()} className="block nametag">
-            <div className="name">
-              <span className="author-prefix">designed by<br /></span>
-              <span className="author">{author}</span>
-            </div>
-          </div>
-        );
-      }
-      lookbook.push(
-        <img key={i} src={prefixLink(images[i])} className="cover block" />
-      );
-    }
-
-
-    return (
-      <div className="photoblock">
-        {lookbook}
-      </div>
-    );
-  }
-}
+import data from './data/lookbook.js';
 
 export default class Lookbook extends React.Component {
   render () {
 
-    const lookbooks = []
-    for (let i=0; i < 9; i+=3) {
-      const authorIndex = i % 4;
-      lookbooks.push(
-        <LookbookItem
-          key={i}
-          author="Tina Xu"
-          images={
-            [
-              "/assets/1.jpg",
-              "/assets/2.jpg",
-              "/assets/3.jpg",
-              "/assets/4.jpg",
-              "/assets/5.jpg",
-            ]
-          }
-          authorIndex={authorIndex}
-        />
-      )
-    }
+    const lookbooks = data.map(lookbook => {
+      const title = lookbook.title;
+      const semester = lookbook.semester;
+      const pdfLink = lookbook.pdf;
+      let preview = lookbook.preview;
+      const designer = preview.designer;
+      let images = preview.images;
+      // create the collection of images with the designer name
+      images = images.map((image, i) => {
+        const path = '/assets/' + title.toLowerCase() + '/';
+        return (
+          <img key={i} src={prefixLink(path + images[i])} className="cover block" />
+        );
+      });
+      images.unshift(
+        <div key={title + " " + designer.toString()} className="block nametag">
+          <div className="name">
+            <span className="author-prefix">designed by<br /></span>
+            <span className="author">{designer}</span>
+          </div>
+        </div>
+      );
+      preview = (
+        <div className="photoblock">
+          {images}
+        </div>
+      );
+      // create the header information
+      const header = (
+        <div className="desc">
+          <div className="header">
+            <span className="semester">{semester}</span>
+            <span className="title"> / {title}</span><br/>
+          </div>
+          <div className="links">
+            <a className="pdf" target="_blank" href={pdfLink}>pdf</a>
+            <Link
+              to={prefixLink('/issue/?filter=' + title + '/')}
+              className='view-carousel'
+            >
+              view all
+            </Link>
+          </div>
+        </div>
+      );
+      return (
+        <div key={title} className="wrapper">
+          {header}
+          {preview}
+        </div>
+      );
+    })
 
     return (
       <div className="lookbook">
         <Helmet
           title={config.siteTitle}
         />
-        <div className="desc">
-  				<span className="date">Spring 2016</span><span className="words"> / Suprasensory</span><a className="pdf" target="_blank" href="https://www.ocf.berkeley.edu/~fast/wp-content/uploads/2016/10/FFP.pdf">  (pdf)</a>
-  			</div>
-
         {lookbooks}
-
       </div>
     )
   }

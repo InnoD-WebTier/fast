@@ -26,9 +26,13 @@ module.exports = React.createClass({
           title={`${config.siteTitle} | ${post.title}`}
         />
         <div className="blog-post">
-          <Link className="back" to={prefixLink('/blog/')}>back</Link>
-          <div className="title">Crash and Burn</div>
-          <div className="date">March 2, 2015</div>
+          <div className="back-container">
+            <img src={prefixLink('/assets/icons/black-arrow.png')} />
+            <Link className="button" to={prefixLink('/blog/')}>back</Link>
+          </div>
+          <div className="title">{post.title}</div>
+          <div className="date">{post.dateFormatted}</div>
+          <div className="author">by {post.author}</div>
           <div className="post" dangerouslySetInnerHTML={{ __html: post.body }} />
         </div>
       </div>

@@ -1,12 +1,18 @@
 .blog-post {
-  .back {
-    color: $grey;
-    display: inline-block;
-    padding-bottom: 3rem;
-    line-height: 2rem;
-    font-size: 1rem;
-    font-family: $font-heading;
-    text-decoration: none;
+  .back-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    img {
+      height: 0.75rem;
+      width: auto;
+      margin-right: 1rem;
+    }
+    .button {
+      color: $off-black;
+      font-family: $font-heading;
+      text-decoration: none;
+    }
   }
   .title {
     font-family: $font-heading;
@@ -14,17 +20,17 @@
     font-weight: 800;
     color: $off-black;
   }
-  .subtitle {
-    font-family: $font-heading;
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: $off-black;
-  }
   .date {
-    color: $grey;
-    font-size: 1.5rem;
-    margin: 1rem 0rem;
+    color: $off-black;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-style: italic;
+    font-family: $font-body;
+  }
+  .author {
+    color: $off-black;
+    font-size: 0.75rem;
     font-style: italic;
     font-family: $font-body;
   }
@@ -33,5 +39,26 @@
     line-height: 2rem;
     font-size: 1rem;
     font-family: $font-body;
+  }
+  h2 {
+    font-family: $font-heading;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $off-black;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .caption-wrapper {
+    font-style: italic;
+    text-align: center;
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
+    line-height: 1rem;
+    span {
+      width: 75%;
+    }
   }
 }

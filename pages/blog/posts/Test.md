@@ -1,21 +1,25 @@
 ---
 title: "Crash and Burn"
-author: Author  
-date: "2016-12-03T22:40:32.169Z"
+author: "Jane Doe" 
+date: "2016-12-03"
 dateFormatted: "March 12, 2016"
 path: "/blog/test/"
 ---
 
-<p class="subtitle">Flashbacks</p>
+[logo]: /assets/suprasensory/1.jpg
+
+## Flashbacks
 <span class="preview">Lindiwe, 22, beams with pride as she presents bottles of her homemade juice and soda to customers at her shop in rural Zimbabwe. Each bottle has a hand-glued label that reads ‘Lee Juice,’ inspired by her nickname. She has big plans to make it a household name.</span>
 
 WASHINGTON — A top specialist in chemical weapons for the Islamic State who is in American custody in northern Iraq has given military interrogators detailed information that resulted in two allied airstrikes in the last week against the group’s illicit weapons sites, Defense Department officials said Wednesday.
+
+![alt text][logo]
 
 The prisoner, an Iraqi identified by officials as Sleiman Daoud al-Afari, was captured a month ago by commandos with an elite American Special Operations force. He was described by three officials as a “significant operative” in the Islamic State’s chemical weapons program. Another official said he once worked for Saddam Hussein’s Military Industrialization Authority.
 
 The Islamic State’s use of chemical weapons in Iraq and Syria has been known, but Mr. Afari’s capture has provided the United States with the opportunity to learn detailed information about the group’s secretive program, including where chemical agents were being stored and produced.
 
-<p class="subtitle">Silverlinings</p>
+## Silverlinings
 The four small moons of Pluto turned out to be brighter and smaller than expected and spin quickly. Their axes are also tipped sideways, a configuration that defies easy explanation.
 
 Pluto and its miniature planetary system are believed to have coalesced out of a cataclysmic collision earlier in the history of the solar system. Over time, the rotation of moons tend to become gravitationally locked so that the same side of the moon is always facing the planet. That occurred with Charon.

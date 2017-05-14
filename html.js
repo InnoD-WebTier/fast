@@ -29,6 +29,7 @@ module.exports = React.createClass({
           />
           {head.title.toComponent()}
           {head.meta.toComponent()}
+          <link rel="stylesheet" href="carousel.css"/> 
           {css}
         </head>
         <body>

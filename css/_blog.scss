@@ -15,12 +15,15 @@
     margin-bottom: 1rem;
   }
   .date {
-    color: $light-grey;
+    color: $grey;
+  }
+  .author {
+    color: $grey;
     margin-bottom: 1rem;
   }
   .preview-text {
     line-height: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .read-more {
     text-decoration: none;

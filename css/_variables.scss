@@ -11,13 +11,14 @@ $off-black: #333;
 $grey: #BDBDBD;
 $light-grey: #E0E0E0;
 $yellow: #FFDE00;
+$purple: #8C27C6;
 
 $link-color: #8BB7FF;
 $link-hover: #2F7EFF;
 
-$default-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+$default-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.15);
 
-$nav-height: 50px;
+$nav-height: 60px;
 $width-increments: 300px;
 
 @mixin transition($props) {

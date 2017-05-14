@@ -78,7 +78,7 @@ class Template extends React.Component {
               <nav className={"nav-links " + showMenu}>
                 {this.getNavLinks()}
               </nav>
-              <img src={prefixLink("/assets/white-menu.png")}
+              <img src={prefixLink("/assets/icons/white-menu.png")}
                 className="menu-button"
                 onClick={() => this.toggleMenu()}
               />

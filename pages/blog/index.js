@@ -24,6 +24,9 @@ class BlogEntry extends React.Component {
           <div className="date">
             {this.props.date}
           </div>
+          <div className="author">
+            {this.props.author}
+          </div>
           <div className="preview-text">
             {this.props.post}
           </div>
@@ -56,7 +59,6 @@ export default class Blog extends React.Component {
           post = post.slice(0, post.length - 1);
         }
         post = post + " ...";
-
         return (
           <BlogEntry
             date={date}
